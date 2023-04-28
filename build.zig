@@ -49,6 +49,7 @@ pub fn build(b: *std.Build) !void {
         "-DHAVE_CONFIG_H",
         "-DPCRE2_CODE_UNIT_WIDTH=8",
         "-DPCRE2_STATIC",
+        "-DPCRE2POSIX_EXP_DECL",
     });
     lib.step.dependOn(&copyFiles.step);
     lib.installHeader("src/pcre2.h.generic", "pcre2.h");
