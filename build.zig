@@ -51,6 +51,7 @@ pub fn build(b: *std.Build) !void {
     });
     lib.step.dependOn(&copyFiles.step);
     lib.installHeader("src/pcre2.h.generic", "pcre2.h");
+    lib.installHeader("src/pcre2posix.h", "pcre2posix.h");
     lib.linkLibC();
     b.installArtifact(lib);
 }
