@@ -43,6 +43,7 @@ pub fn build(b: *std.Build) !void {
         "src/pcre2_valid_utf.c",
         "src/pcre2_xclass.c",
         "src/pcre2_chartables.c",
+        "src/pcre2posix.c",
     }, &.{
         "-std=c99",
         "-DHAVE_CONFIG_H",
